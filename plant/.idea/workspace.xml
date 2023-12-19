@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="44ef9d00-c498-4c21-955c-a852e9ead872" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/adaptive.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/auth/x64/mssql-jdbc_auth-12.4.2.x64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/auth/x86/mssql-jdbc_auth-12.4.2.x86.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/install.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/jars/mssql-jdbc-12.4.2.jre11-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/jars/mssql-jdbc-12.4.2.jre11-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/jars/mssql-jdbc-12.4.2.jre11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/jars/mssql-jdbc-12.4.2.jre8-javadoc.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/jars/mssql-jdbc-12.4.2.jre8-sources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/jars/mssql-jdbc-12.4.2.jre8.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/license.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/redist.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/release.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/adaptive/ExecuteStoredProcedures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/adaptive/readLargeData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/adaptive/updateLargeData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/alwaysencrypted/AlwaysEncrypted.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/azureactivedirectoryauthentication/AzureActiveDirectoryAuthentication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/connections/ConnectDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/connections/ConnectURL.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/constrained/ConstrainedDelegation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/dataclassification/DataDiscoveryAndClassification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/datatypes/BasicDataTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/datatypes/SpatialDataTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/datatypes/SqlXmlDataType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/resultsets/CacheResultSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/resultsets/RetrieveResultSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/resultsets/UpdateResultSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/samples/sparse/SparseColumns.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/thirdpartynotices.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/xa/x64/sqljdbc_xa.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/xa/x86/sqljdbc_xa.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/xa/xa_install.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plant.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/user.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ZhtWszHiktl4pUeB9XlpEhZAQq" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/86176/Desktop/DB-Plant/plant/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/jars/mssql-jdbc-12.4.2.jre8.jar",
+    "project.structure.last.edited": "库",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="44ef9d00-c498-4c21-955c-a852e9ead872" name="更改" comment="" />
+      <created>1702886176484</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1702886176484</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

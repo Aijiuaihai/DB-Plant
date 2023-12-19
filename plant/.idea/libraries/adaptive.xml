@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="adaptive">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/jars/mssql-jdbc-12.4.2.jre11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/sqljdbc_12.4.2.0_chs/sqljdbc_12.4/chs/jars/mssql-jdbc-12.4.2.jre8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
