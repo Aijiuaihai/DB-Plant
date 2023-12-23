@@ -17,15 +17,14 @@ public class Main {
                         "name:");
         Scanner sc0 = new Scanner(System.in);
         String username = sc0.next();
-        System.out.println("请密码:");
+        System.out.println("密码:");
         sc0 = new Scanner(System.in);
-        String pwd = sc0.next();
-        String p1 = DAOFactory.getInstance().getuserDAO().getPwd(username);
+        String pwd = sc0.nextLine().trim();  // 修剪掉首尾空格
+        String p1 = DAOFactory.getInstance().getuserDAO().getPwd(username).trim();  // 修剪数据库中的密码
         if (pwd.equals(p1)) {
-            System.out.println(
-                    "OK!!!!"
-            );
-
+            System.out.println("OK!!!!");
+        } else {
+            System.out.println("error: " + pwd + ", " + p1);
         }
     }
 }
