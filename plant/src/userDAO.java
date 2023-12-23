@@ -5,4 +5,5 @@ public interface userDAO {
     String getPwd(String username);
 
     List<user> getusers() ;
+    int gettype(String username);
 }

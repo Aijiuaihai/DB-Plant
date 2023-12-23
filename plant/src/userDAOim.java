@@ -57,6 +57,23 @@ public class userDAOim extends DAObese implements userDAO {
         }
         return "-1";
     }
+    public int gettype(String username){
+        try {
+            Connection conn = getConnection();
+            String sql = "select usertype from [user] where username = ?";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, username);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()){
+                return rs.getInt(1);
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return -1;
+    }
+
     public List<user> getusers() {
         try {
             Connection conn = getConnection();
