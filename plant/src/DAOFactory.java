@@ -13,4 +13,7 @@ public class DAOFactory {
     public userDAO getuserDAO(){
         return new userDAOim();
     }
+    public plantsDAO getplantsDAO(){
+        return new plantsDAOim();
+    }
 }
