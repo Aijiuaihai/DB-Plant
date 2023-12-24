@@ -89,7 +89,26 @@ public class Main {
                                 System.out.println("修改成功");
                                 break;
                             case "3":
-                                System.out.println("查找成功");
+                                plantsDAOim plantsDAO3 = new plantsDAOim();
+                                System.out.println("请输入要查找的植物ID:");
+                                Scanner inputScanner3 = new Scanner(System.in);
+                                int plantID3 = inputScanner3.nextInt();
+                                plants foundPlant = plantsDAO3.getPlantByID(plantID3);
+                                if (foundPlant != null) {
+                                    System.out.println("查找成功");
+                                    System.out.println("植物ID: " + foundPlant.getPlantID());
+                                    System.out.println("植物疾病名称: " + foundPlant.getDiseaseName());
+                                    System.out.println("植物别名: " + foundPlant.getAlias());
+                                    System.out.println("植物科名: " + foundPlant.getFamilyName());
+                                    System.out.println("植物种名: " + foundPlant.getSpeciesName());
+                                    System.out.println("植物形态特征: " + foundPlant.getMorphologicalFeatures());
+                                    System.out.println("植物栽培技术: " + foundPlant.getCultivationTechniques());
+                                    System.out.println("植物应用价值: " + foundPlant.getApplicationValue());
+                                    System.out.println("植物图片ID: " + foundPlant.getImageID());
+                                } else {
+                                    System.out.println("未找到该植物");
+                                }
+                                break;
                             case "4":
                                 System.out.println("修改成功");
                             case "5":
