@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2023-12-20 10:16:11
+Date: 2023-12-26 21:24:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,9 +32,6 @@ CREATE TABLE `distribution` (
 -- ----------------------------
 -- Records of distribution
 -- ----------------------------
-INSERT INTO `distribution` VALUES ('1', null, '', 'Province');
-INSERT INTO `distribution` VALUES ('2', '1', '', 'City');
-INSERT INTO `distribution` VALUES ('3', '2', '', 'County');
 
 -- ----------------------------
 -- Table structure for `maintenancetask`
@@ -51,16 +48,18 @@ CREATE TABLE `maintenancetask` (
   `creator` varchar(255) DEFAULT NULL,
   `createTime` datetime DEFAULT NULL,
   `updateTime` datetime DEFAULT NULL,
+  `bool` varchar(255) DEFAULT '未养护',
   PRIMARY KEY (`taskID`),
   KEY `plantID` (`plantID`),
   CONSTRAINT `maintenancetask_ibfk_1` FOREIGN KEY (`plantID`) REFERENCES `plant` (`plantID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of maintenancetask
 -- ----------------------------
-INSERT INTO `maintenancetask` VALUES ('2', '1', '11', '11', '1', '1', '1', '1', '2023-12-25 20:47:48', null);
-INSERT INTO `maintenancetask` VALUES ('4', 'care', '2022-9-8', 'bjfu', 'care1', 'water', '1', 'manger', '2023-12-25 21:15:27', null);
+INSERT INTO `maintenancetask` VALUES ('2', '1', '11', '11', '1', '1', '1', '1', '2023-12-25 20:47:48', null, '未养护');
+INSERT INTO `maintenancetask` VALUES ('4', 'care', '2022-9-8', 'bjfu', 'care1', 'water', '1', 'manger', '2023-12-25 21:15:27', null, '未养护');
+INSERT INTO `maintenancetask` VALUES ('5', 'test', '2023-12-11', 'bjfu', 'care1', 'water', '1', 'manger', '2023-12-26 21:22:55', null, '未养护');
 
 -- ----------------------------
 -- Table structure for `pestcontrol`
@@ -151,7 +150,6 @@ CREATE TABLE `plant_classify` (
 -- ----------------------------
 -- Records of plant_classify
 -- ----------------------------
-INSERT INTO `plant_classify` VALUES ('1', '5', '', '3', '3', '', '2023-12-25 00:00:00', null);
 
 -- ----------------------------
 -- Table structure for `plant_monitoring`
@@ -215,9 +213,6 @@ CREATE TABLE `taxonomy_classify` (
 -- ----------------------------
 -- Records of taxonomy_classify
 -- ----------------------------
-INSERT INTO `taxonomy_classify` VALUES ('1', null, '2', 'Family');
-INSERT INTO `taxonomy_classify` VALUES ('2', '1', '3', 'Genus');
-INSERT INTO `taxonomy_classify` VALUES ('3', '2', '4', 'Species');
 
 -- ----------------------------
 -- Table structure for `user`
