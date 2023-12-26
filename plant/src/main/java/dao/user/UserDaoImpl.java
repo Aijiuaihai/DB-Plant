@@ -145,5 +145,27 @@ public class UserDaoImpl implements UserDao {
             e.printStackTrace();
         }
         return userList;
+    }public List<User> getAllUsersNoadmin() {
+        List<User> userList = new ArrayList<>();
+        try {
+            Connection connection = MySQLConnectionPool.getConnection();
+            String sql = "SELECT * FROM `user` WHERE user_type != 'admin' AND user_type != 'department'";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                User user = new User();
+                user.setUser_id(rs.getInt("user_id"));
+                user.setUsername(rs.getString("username"));
+                user.setUser_type(rs.getString("user_type"));
+                userList.add(user);
+            }
+
+            rs.close();
+            ps.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return userList;
     }
 }

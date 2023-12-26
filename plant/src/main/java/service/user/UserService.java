@@ -71,9 +71,29 @@ public class UserService {
                 System.out.println("输入有误。");
         }
     }
+    public void service2() {
+        String message = """
+                1.显示所有用户
+                """;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(message);
+        switch (scanner.nextLine()) {
+            case "1":
+                getAllUsersNoadmin();
+                break;
+            default:
+                System.out.println("输入有误。");
+        }
+    }
 
     private void getAllUsers(){
         ArrayList<User> users = (ArrayList<User>) userDao.getAllUsers();
+        for (User u : users) {
+            System.out.println(u);
+        }
+    }
+    private void getAllUsersNoadmin(){
+        ArrayList<User> users = (ArrayList<User>) userDao.getAllUsersNoadmin();
         for (User u : users) {
             System.out.println(u);
         }

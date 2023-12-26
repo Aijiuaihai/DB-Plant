@@ -105,6 +105,7 @@ public class Main {
                         2.园林植物分类管理
                         3.园林植物养护管理
                         4.园林植物监测管理
+                        5.用户管理
                                     """;
         boolean keepInput = true;
         while (keepInput){
@@ -128,6 +129,10 @@ public class Main {
                 case "4":
                     MonitorService monitorService = new MonitorService();
                     monitorService.service();
+                    break;
+                case "5":
+                    UserService userService = new UserService();
+                    userService.service2();
                     break;
                 case "exit":
                     System.out.println("退出系统");
