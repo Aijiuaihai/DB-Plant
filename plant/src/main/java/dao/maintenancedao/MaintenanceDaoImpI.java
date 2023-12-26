@@ -34,6 +34,7 @@ public class MaintenanceDaoImpI implements MaintenanceDao{
                 maintenanceTask.setCreator(rs.getString("creator"));
                 maintenanceTask.setCreateTime(rs.getDate("createTime"));
                 maintenanceTask.setUpdateTime(rs.getDate("updateTime"));
+                maintenanceTask.setbool(rs.getString("bool"));
             }
 
             rs.close();
@@ -125,6 +126,31 @@ public class MaintenanceDaoImpI implements MaintenanceDao{
 
         return result;
     }
+
+
+    public boolean updateMaintenanceTask2(int taskID,String bool) {
+        boolean result = false;
+        try {
+            Connection connection = MySQLConnectionPool.getConnection();
+            String sql = "UPDATE maintenancetask SET bool=? WHERE taskID = ?";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1,bool);
+            ps.setInt(2, taskID);
+
+            // 执行更新
+            int rowsAffected = ps.executeUpdate();
+            result = rowsAffected > 0; // 如果更新了记录，则返回 true
+
+            ps.close();
+            connection.close(); // 关闭资源
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+
 
 
     @Override

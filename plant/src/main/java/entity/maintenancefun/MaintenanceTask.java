@@ -13,6 +13,7 @@ public class MaintenanceTask {
     private String creator;
     private Date createTime;
     private Date updateTime;
+    private String bool;
 
     @Override
     public String toString() {
@@ -108,5 +109,12 @@ public class MaintenanceTask {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+    public String getbool() {
+        return bool;
+    }
+
+    public void setbool(String bool) {
+        this.bool = bool;
     }
 }

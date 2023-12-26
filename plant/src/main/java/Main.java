@@ -3,7 +3,6 @@ import entity.user.User;
 import service.monitor.MonitorService;
 import service.pestControl.PestControlService;
 import service.user.UserService;
-
 import service.classify.ClassifyService;
 import service.info.InfoService;
 import service.maintenancefun.MaintenanceService;
@@ -159,7 +158,7 @@ public class Main {
             System.out.println("输入 \'exit\' 退出系统");
             switch (scanner.nextLine()) {
                 case "1":
-                    MaintenanceService.service();
+                    MaintenanceService.service2();
                     break;
                 case "2":
                     PestControlService.service();

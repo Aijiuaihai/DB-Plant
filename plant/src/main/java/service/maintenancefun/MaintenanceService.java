@@ -2,8 +2,12 @@ package service.maintenancefun;
 
 import dao.maintenancedao.MaintenanceDaoImpI;
 import entity.maintenancefun.MaintenanceTask;
+import util.MySQLConnectionPool;
 
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -44,6 +48,30 @@ public class MaintenanceService {
         }
     }
 
+    public static void service2() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(welcome);
+        System.out.println(options);
+
+        System.out.print("请选择操作（输入数字）: ");
+        int choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1, 2:
+                System.out.println("您无权进行该操作");
+                break;
+            case 3:
+                updateMaintenanceTask2();
+                break;
+            case 4:
+                queryMaintenanceTask();
+                break;
+            default:
+                System.out.println("无效的选择！");
+                break;
+        }
+    }
     public static void addMaintenanceTask(){
         Scanner scanner = new Scanner(System.in);
 
@@ -162,8 +190,34 @@ public class MaintenanceService {
             System.out.println("植物养护任务更新失败。");
         }
     }
+    public static void updateMaintenanceTask2(){
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("请输入要更新的植物养护任务ID：");
+        System.out.print("任务ID: ");
+        int taskId = Integer.parseInt(scanner.nextLine());
 
+        System.out.println("请输入新的植物养护信息：");
+
+        System.out.print("是否完成养护: ");
+        String bool = scanner.nextLine();
+
+        // 获取当前时间作为更新时间
+        Date currentTime = new Date();
+
+        MaintenanceTask maintenanceTask = new MaintenanceTask();
+        maintenanceTask.setTaskId(taskId);
+        maintenanceTask.setCreateTime(null); // 更新操作不改变创建时间
+        maintenanceTask.setUpdateTime(currentTime);
+
+        MaintenanceDaoImpI maintenanceDao = new MaintenanceDaoImpI();
+        boolean result = maintenanceDao.updateMaintenanceTask2(taskId,bool);
+        if (result) {
+            System.out.println("植物养护任务更新成功！");
+        } else {
+            System.out.println("植物养护任务更新失败。");
+        }
+    }
     public static void queryMaintenanceTask() {
         Scanner scanner = new Scanner(System.in);
 
@@ -184,6 +238,7 @@ public class MaintenanceService {
             System.out.println("创建者: " + maintenanceTask.getCreator());
             System.out.println("创建时间: " + maintenanceTask.getCreateTime());
             System.out.println("更新时间: " + maintenanceTask.getUpdateTime());
+            System.out.println("完成状态: " + maintenanceTask.getbool());
         } else {
             System.out.println("未找到任务ID为 " + taskId + " 的植物养护任务。");
         }
