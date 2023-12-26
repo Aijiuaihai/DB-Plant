@@ -1,7 +1,6 @@
 package dao.classify;
 
-import entity.classify.TaxonomyClassify;
-import entity.info.Taxonomy;
+import classdefine.classify.TaxonomyClassify;
 
 public interface TaxonomyClassifyDao {
     // 根据分类学编号获取分类学信息

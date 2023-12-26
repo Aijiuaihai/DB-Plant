@@ -1,7 +1,7 @@
 package dao.info;
 
 
-import entity.info.Taxonomy;
+import classdefine.info.Taxonomy;
 
 import java.util.ArrayList;
 import java.util.List;

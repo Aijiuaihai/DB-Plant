@@ -1,4 +1,4 @@
-package entity.info;
+package classdefine.info;
 
 // 植物图片实体类
 public class PlantImage {

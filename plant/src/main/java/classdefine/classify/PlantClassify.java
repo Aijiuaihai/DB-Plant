@@ -1,4 +1,4 @@
-package entity.classify;
+package classdefine.classify;
 
 import java.util.Date;
 

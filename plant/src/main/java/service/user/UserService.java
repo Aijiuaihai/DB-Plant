@@ -1,10 +1,8 @@
 package service.user;
 
-import dao.user.UserDao;
 import dao.user.UserDaoImpl;
-import entity.user.User;
+import classdefine.user.User;
 
-import java.security.spec.ECField;
 import java.util.ArrayList;
 import java.util.Scanner;
 

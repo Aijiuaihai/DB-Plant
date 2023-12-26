@@ -1,8 +1,7 @@
 package dao.monitor;
 
-import entity.monitor.PlantMonitor;
+import classdefine.monitor.PlantMonitor;
 
-import java.util.Date;
 import java.util.List;
 
 public interface MonitorDao {

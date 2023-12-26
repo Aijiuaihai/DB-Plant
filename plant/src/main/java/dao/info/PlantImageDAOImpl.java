@@ -1,7 +1,7 @@
 package dao.info;
 
-import entity.info.PlantImage;
-import util.MySQLConnectionPool;
+import classdefine.info.PlantImage;
+import pool.MySQLConnectionPool;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

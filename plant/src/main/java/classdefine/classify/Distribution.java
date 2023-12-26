@@ -1,4 +1,4 @@
-package entity.classify;
+package classdefine.classify;
 
 public class Distribution {
     private int distributionId;

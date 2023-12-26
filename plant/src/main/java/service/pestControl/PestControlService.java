@@ -1,8 +1,7 @@
 package service.pestControl;
 
-import dao.pestControl.PestControlDao;
 import dao.pestControl.PestControlDaoImpI;
-import entity.pestControl.PestControl;
+import classdefine.pestControl.PestControl;
 
 import java.util.Date;
 import java.util.Scanner;

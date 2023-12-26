@@ -1,4 +1,4 @@
-package entity.maintenancefun;
+package classdefine.maintenancefun;
 
 import java.util.Date;
 

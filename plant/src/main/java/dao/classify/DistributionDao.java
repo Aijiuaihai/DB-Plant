@@ -1,7 +1,6 @@
 package dao.classify;
 
-import entity.classify.Distribution;
-import entity.classify.TaxonomyClassify;
+import classdefine.classify.Distribution;
 
 public interface DistributionDao {
     // 根据地区编号获取地区信息

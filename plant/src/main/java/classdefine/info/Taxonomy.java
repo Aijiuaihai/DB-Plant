@@ -1,4 +1,4 @@
-package entity.info;
+package classdefine.info;
 
 // 分类学实体类
 public class Taxonomy {

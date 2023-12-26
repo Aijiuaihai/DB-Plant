@@ -1,7 +1,7 @@
 package dao.maintenancedao;
 
 
-import entity.maintenancefun.MaintenanceTask;
+import classdefine.maintenancefun.MaintenanceTask;
 
 public interface MaintenanceDao {
     // 根据养护编号获取养护信息

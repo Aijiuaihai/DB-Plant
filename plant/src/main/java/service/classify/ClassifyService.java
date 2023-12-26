@@ -2,12 +2,11 @@ package service.classify;
 
 import dao.classify.*;
 import dao.info.PlantDAOImpl;
-import entity.classify.Distribution;
-import entity.classify.PlantClassify;
-import entity.classify.TaxonomyClassify;
-import entity.info.Plant;
+import classdefine.classify.Distribution;
+import classdefine.classify.PlantClassify;
+import classdefine.classify.TaxonomyClassify;
+import classdefine.info.Plant;
 
-import java.security.PublicKey;
 import java.util.*;
 
 public class ClassifyService {

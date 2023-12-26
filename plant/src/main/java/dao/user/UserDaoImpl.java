@@ -1,7 +1,7 @@
 package dao.user;
 
-import entity.user.User;
-import util.MySQLConnectionPool;
+import classdefine.user.User;
+import pool.MySQLConnectionPool;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

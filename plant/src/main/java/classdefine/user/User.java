@@ -1,4 +1,4 @@
-package entity.user;
+package classdefine.user;
 
 public class User {
     private int user_id;

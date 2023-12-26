@@ -3,9 +3,9 @@ package service.monitor;
 import dao.info.PlantDAOImpl;
 import dao.info.TaxonomyDAOImpl;
 import dao.monitor.MonitorDaoImpl;
-import entity.info.Plant;
-import entity.info.Taxonomy;
-import entity.monitor.PlantMonitor;
+import classdefine.info.Plant;
+import classdefine.info.Taxonomy;
+import classdefine.monitor.PlantMonitor;
 
 import java.util.ArrayList;
 import java.util.Date;

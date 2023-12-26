@@ -1,6 +1,6 @@
 package dao.pestControl;
 
-import entity.pestControl.PestControl;
+import classdefine.pestControl.PestControl;
 
 public interface PestControlDao {
     PestControl getPestControlById(int pestControlId);

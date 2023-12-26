@@ -1,4 +1,4 @@
-package entity.info;
+package classdefine.info;
 
 import java.util.Date;
 

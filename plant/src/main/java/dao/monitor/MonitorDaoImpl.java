@@ -1,7 +1,7 @@
 package dao.monitor;
 
-import entity.monitor.PlantMonitor;
-import util.MySQLConnectionPool;
+import classdefine.monitor.PlantMonitor;
+import pool.MySQLConnectionPool;
 
 import java.sql.*;
 import java.util.ArrayList;

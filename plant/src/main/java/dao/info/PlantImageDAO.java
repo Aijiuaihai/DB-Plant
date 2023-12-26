@@ -1,6 +1,6 @@
 package dao.info;
 
-import entity.info.PlantImage;
+import classdefine.info.PlantImage;
 
 import java.util.List;
 

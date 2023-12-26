@@ -1,9 +1,7 @@
 package dao.classify;
 
-import entity.classify.PlantClassify;
-import entity.classify.TaxonomyClassify;
-import entity.info.Taxonomy;
-import util.MySQLConnectionPool;
+import classdefine.classify.TaxonomyClassify;
+import pool.MySQLConnectionPool;
 
 import java.sql.*;
 

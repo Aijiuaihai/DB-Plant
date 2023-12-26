@@ -1,13 +1,9 @@
 package service.maintenancefun;
 
 import dao.maintenancedao.MaintenanceDaoImpI;
-import entity.maintenancefun.MaintenanceTask;
-import util.MySQLConnectionPool;
+import classdefine.maintenancefun.MaintenanceTask;
 
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.Date;
 import java.util.Scanner;
 

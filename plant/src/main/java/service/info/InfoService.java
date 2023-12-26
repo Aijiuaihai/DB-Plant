@@ -1,13 +1,12 @@
 package service.info;
 
 import dao.info.*;
-import entity.info.FullPlantInfo;
-import entity.info.Plant;
-import entity.info.PlantImage;
-import entity.info.Taxonomy;
+import classdefine.info.FullPlantInfo;
+import classdefine.info.Plant;
+import classdefine.info.PlantImage;
+import classdefine.info.Taxonomy;
 
 
-import java.io.PrintWriter;
 import java.util.*;
 
 public class InfoService {

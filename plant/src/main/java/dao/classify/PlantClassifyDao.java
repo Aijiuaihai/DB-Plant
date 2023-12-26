@@ -1,7 +1,6 @@
 package dao.classify;
 
-import entity.classify.PlantClassify;
-import entity.info.Plant;
+import classdefine.classify.PlantClassify;
 
 import java.util.List;
 

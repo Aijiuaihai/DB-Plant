@@ -1,4 +1,4 @@
-package entity.monitor;
+package classdefine.monitor;
 
 import java.util.Date;
 

@@ -1,10 +1,7 @@
 package dao.info;
 
-import com.sun.jdi.ArrayReference;
-import com.sun.jdi.request.StepRequest;
-import entity.info.Plant;
-import entity.info.Taxonomy;
-import util.MySQLConnectionPool;
+import classdefine.info.Taxonomy;
+import pool.MySQLConnectionPool;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

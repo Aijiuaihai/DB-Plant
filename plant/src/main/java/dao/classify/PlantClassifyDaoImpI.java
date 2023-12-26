@@ -1,8 +1,8 @@
 package dao.classify;
 
 
-import entity.classify.PlantClassify;
-import util.MySQLConnectionPool;
+import classdefine.classify.PlantClassify;
+import pool.MySQLConnectionPool;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

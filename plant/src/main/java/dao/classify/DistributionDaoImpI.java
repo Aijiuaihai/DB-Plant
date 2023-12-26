@@ -1,8 +1,7 @@
 package dao.classify;
 
-import entity.classify.Distribution;
-import entity.classify.TaxonomyClassify;
-import util.MySQLConnectionPool;
+import classdefine.classify.Distribution;
+import pool.MySQLConnectionPool;
 
 import java.sql.*;
 

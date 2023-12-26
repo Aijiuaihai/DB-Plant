@@ -1,7 +1,7 @@
 package dao.pestControl;
 
-import entity.pestControl.PestControl;
-import util.MySQLConnectionPool;
+import classdefine.pestControl.PestControl;
+import pool.MySQLConnectionPool;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

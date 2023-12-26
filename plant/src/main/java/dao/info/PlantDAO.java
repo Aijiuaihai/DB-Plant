@@ -1,6 +1,6 @@
 package dao.info;
 
-import entity.info.Plant;
+import classdefine.info.Plant;
 
 import java.util.List;
 

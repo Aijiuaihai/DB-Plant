@@ -1,8 +1,8 @@
 package dao.maintenancedao;
 
 
-import entity.maintenancefun.MaintenanceTask;
-import util.MySQLConnectionPool;
+import classdefine.maintenancefun.MaintenanceTask;
+import pool.MySQLConnectionPool;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

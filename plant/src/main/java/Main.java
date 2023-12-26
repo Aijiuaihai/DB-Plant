@@ -1,5 +1,5 @@
 import dao.user.UserDaoImpl;
-import entity.user.User;
+import classdefine.user.User;
 import service.monitor.MonitorService;
 import service.pestControl.PestControlService;
 import service.user.UserService;
