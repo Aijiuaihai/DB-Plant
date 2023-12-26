@@ -34,7 +34,6 @@ public class Main {
                 mainService(username);
             } else {
                 System.out.println("登录失败，请检查用户名、密码");
-                keepLogin = true;
             }
         }
 
@@ -46,18 +45,10 @@ public class Main {
         User user = userDao.getUserByUsername(username);
 
         switch (user.getUser_type()) {
-            case "admin":
-                adminService();
-                break;
-            case "department":
-                departmentService();
-                break;
-            case "careTaker":
-                careTakerService();
-                break;
-            case "monitor":
-                monitorService();
-                break;
+            case "admin" -> adminService();
+            case "department" -> departmentService();
+            case "careTaker" -> careTakerService();
+            case "monitor" -> monitorService();
         }
     }
 
@@ -76,23 +67,20 @@ public class Main {
             System.out.println("请输入您想要的功能序号，例如1");
             System.out.println("输入 'exit' 退出系统");
             switch (scanner.nextLine()) {
-                case "1":
+                case "1" -> {
                     InfoService service = new InfoService();
                     service.service();
-                    break;
-                case "2":
-                    ClassifyService.service();
-                    break;
-                case "3":
+                }
+                case "2" -> ClassifyService.service();
+                case "3" -> {
                     UserService userService = new UserService();
                     userService.service();
-                    break;
-                case "exit":
+                }
+                case "exit" -> {
                     System.out.println("退出系统");
                     keepInput = false;
-                    break;
-                default:
-                    System.out.println("输入序号错误，请您重新输入");
+                }
+                default -> System.out.println("输入序号错误，请您重新输入");
             }
         }
     }
@@ -111,34 +99,29 @@ public class Main {
             System.out.println();
             System.out.println(message);
             System.out.println("请输入您想要的功能序号，例如1");
-            System.out.println("输入 \'exit\' 退出系统");
+            System.out.println("输入 'exit' 退出系统");
 
 
             switch (scanner.nextLine()) {
-                case "1":
+                case "1" -> {
                     InfoService service = new InfoService();
                     service.service();
-                    break;
-                case "2":
-                    ClassifyService.service();
-                    break;
-                case "3":
-                    MaintenanceService.service();
-                    break;
-                case "4":
+                }
+                case "2" -> ClassifyService.service();
+                case "3" -> MaintenanceService.service();
+                case "4" -> {
                     MonitorService monitorService = new MonitorService();
                     monitorService.service();
-                    break;
-                case "5":
+                }
+                case "5" -> {
                     UserService userService = new UserService();
                     userService.service2();
-                    break;
-                case "exit":
+                }
+                case "exit" -> {
                     System.out.println("退出系统");
                     keepInput = false;
-                    break;
-                default:
-                    System.out.println("输入序号错误，请您重新输入");
+                }
+                default -> System.out.println("输入序号错误，请您重新输入");
             }
 
         }
@@ -155,20 +138,15 @@ public class Main {
             System.out.println();
             System.out.println(message);
             System.out.println("请输入您想要的功能序号，例如1");
-            System.out.println("输入 \'exit\' 退出系统");
+            System.out.println("输入 'exit' 退出系统");
             switch (scanner.nextLine()) {
-                case "1":
-                    MaintenanceService.service2();
-                    break;
-                case "2":
-                    PestControlService.service();
-                    break;
-                case "exit":
+                case "1" -> MaintenanceService.service2();
+                case "2" -> PestControlService.service();
+                case "exit" -> {
                     System.out.println("退出系统");
                     keepInput = false;
-                    break;
-                default:
-                    System.out.println("输入序号错误，请您重新输入");
+                }
+                default -> System.out.println("输入序号错误，请您重新输入");
             }
         }
     }
@@ -183,19 +161,17 @@ public class Main {
             System.out.println();
             System.out.println(message);
             System.out.println("请输入您想要的功能序号，例如1");
-            System.out.println("输入 \'exit\' 退出系统");
+            System.out.println("输入 'exit' 退出系统");
             switch (scanner.nextLine()) {
-                case "1":
+                case "1" -> {
                     MonitorService monitorService = new MonitorService();
-
                     monitorService.service();
-                    break;
-                case "exit":
+                }
+                case "exit" -> {
                     System.out.println("退出系统");
                     keepInput = false;
-                    break;
-                default:
-                    System.out.println("输入序号错误，请您重新输入");
+                }
+                default -> System.out.println("输入序号错误，请您重新输入");
             }
         }
     }
