@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2023-12-26 21:24:58
+Date: 2023-12-26 21:45:59
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,11 +27,14 @@ CREATE TABLE `distribution` (
   PRIMARY KEY (`distributionID`),
   KEY `parentID` (`parentID`) USING BTREE,
   CONSTRAINT `distribution_ibfk_1` FOREIGN KEY (`parentID`) REFERENCES `distribution` (`distributionID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of distribution
 -- ----------------------------
+INSERT INTO `distribution` VALUES ('4', null, '四川', 'Province');
+INSERT INTO `distribution` VALUES ('5', '4', '泸州', 'City');
+INSERT INTO `distribution` VALUES ('6', '5', '', 'County');
 
 -- ----------------------------
 -- Table structure for `maintenancetask`
@@ -104,7 +107,7 @@ CREATE TABLE `plant` (
 -- ----------------------------
 -- Records of plant
 -- ----------------------------
-INSERT INTO `plant` VALUES ('1', '', '1', '222', '', '', '', 'admin', '2023-12-25 00:00:00', '2023-12-25 00:00:00');
+INSERT INTO `plant` VALUES ('1', '', '断肠草', '多年生草本，高20-60（-100）厘米。须根数条，粗线形，长8-10厘米，粗1-1.5毫米，黄色，干时茶褐色；根茎短，被残枯的基生叶鞘。', '', '', '', 'admin', '2023-12-25 00:00:00', '2023-12-25 00:00:00');
 
 -- ----------------------------
 -- Table structure for `plantimage`
@@ -150,6 +153,7 @@ CREATE TABLE `plant_classify` (
 -- ----------------------------
 -- Records of plant_classify
 -- ----------------------------
+INSERT INTO `plant_classify` VALUES ('1', '断肠草', '林下、林缘、灌丛下、草坡或路边。', '6', '6', 'admin', '2023-12-26 00:00:00', null);
 
 -- ----------------------------
 -- Table structure for `plant_monitoring`
@@ -194,7 +198,7 @@ CREATE TABLE `taxonomy` (
 -- ----------------------------
 -- Records of taxonomy
 -- ----------------------------
-INSERT INTO `taxonomy` VALUES ('1', '1', '1', '1', '1');
+INSERT INTO `taxonomy` VALUES ('1', '罂粟科', '紫堇属', '南黄堇 ', '1');
 
 -- ----------------------------
 -- Table structure for `taxonomy_classify`
@@ -208,11 +212,14 @@ CREATE TABLE `taxonomy_classify` (
   PRIMARY KEY (`taxonomyID`),
   KEY `parentID` (`parentID`) USING BTREE,
   CONSTRAINT `taxonomy_classify_ibfk_1` FOREIGN KEY (`parentID`) REFERENCES `taxonomy_classify` (`taxonomyID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of taxonomy_classify
 -- ----------------------------
+INSERT INTO `taxonomy_classify` VALUES ('4', null, '罂粟科', 'Family');
+INSERT INTO `taxonomy_classify` VALUES ('5', '4', '紫堇属', 'Genus');
+INSERT INTO `taxonomy_classify` VALUES ('6', '5', '南黄堇', 'Species');
 
 -- ----------------------------
 -- Table structure for `user`

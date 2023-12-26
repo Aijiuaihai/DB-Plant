@@ -74,7 +74,7 @@ public class Main {
             System.out.println();
             System.out.println(message);
             System.out.println("请输入您想要的功能序号，例如1");
-            System.out.println("输入 \'exit\' 退出系统");
+            System.out.println("输入 'exit' 退出系统");
             switch (scanner.nextLine()) {
                 case "1":
                     InfoService service = new InfoService();
