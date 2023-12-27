@@ -105,9 +105,9 @@ public class Main {
             switch (scanner.nextLine()) {
                 case "1" -> {
                     InfoService service = new InfoService();
-                    service.service();
+                    service.service2();
                 }
-                case "2" -> ClassifyService.service();
+                case "2" -> ClassifyService.service2();
                 case "3" -> MaintenanceService.service();
                 case "4" -> {
                     MonitorService monitorService = new MonitorService();

@@ -19,7 +19,11 @@ public class ClassifyService {
             5.根据科或属或种查询下属植物信息
             6.根据生长环境查询
             """;
-
+    public static final String options2 = """
+            1.查询植物分类信息
+            2.根据科或属或种查询下属植物信息
+            3.根据生长环境查询
+            """;
     public static void service() {
         Scanner scanner = new Scanner(System.in);
 
@@ -66,6 +70,36 @@ public class ClassifyService {
         }
     }
 
+        public static void service2() {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println(welcome);
+            System.out.println(options2);
+
+            System.out.print("请选择操作（输入数字）: ");
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    // 查询植物分类信息的代码
+                    queryClassInfo();
+//                System.out.println("查询植物分类信息");
+                    break;
+                case 2:
+                    // 根据分布区域查询下属植物信息的代码
+                    queryByTaxonomyName();
+//                System.out.println("根据分布区域查询下属植物信息");
+                    break;
+                case 3:
+                    // 根据生长环境查询的代码
+                    queryByGrowthEnvironment();
+//                System.out.println("根据生长环境查询");
+                    break;
+                default:
+                    System.out.println("无效的选择！");
+                    break;
+            }
+        }
     public static void addClassifyInfo(){
         Scanner scanner = new Scanner(System.in);
 

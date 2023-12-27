@@ -20,6 +20,11 @@ public class InfoService {
             5.统计每科植物的数量
             6.根据属性、属性组合查询植物
             """;
+    private static final String options2 = """
+            1.查看前10个植物的简略信息（不完整）
+            2.统计每科植物的数量
+            3.根据属性、属性组合查询植物
+            """;
     private Scanner scanner;
 
     public void service() {
@@ -61,7 +66,29 @@ public class InfoService {
 
 
     }
+    public void service2() {
+        scanner = new Scanner(System.in);
 
+        System.out.println(welcome);
+        System.out.println(options2);
+
+        switch (scanner.nextLine()) {
+            case "1":
+                getFirst5Plants();
+                break;
+            case "2":
+                analyseFamily();
+                break;
+            case "3":
+                searchByMultipleParams();
+                break;
+            default:
+                System.out.println("输入错误");
+
+        }
+
+
+    }
     private static void addPlant() {
         Scanner scanner = new Scanner(System.in);
         Taxonomy taxonomy = new Taxonomy();
