@@ -5,6 +5,7 @@ public class User {
     private String username;
     private String password;
     private String user_type;
+    private String email;
 
     public int getUser_id() {
         return user_id;
@@ -37,9 +38,13 @@ public class User {
     public void setUser_type(String user_type) {
         this.user_type = user_type;
     }
+    public void seteamil(String email) {this.email = email;}
+    public String getemail() {
+        return email;
+    }
 
     @Override
     public String toString() {
-        return String.format("ID:%d\t 用户名:%s\t  密码:%s\t  身份:%s", user_id, username, password, user_type);
+        return String.format("ID:%d\t 用户名:%s\t  密码:%s\t  身份:%s  \t 邮箱:%s", user_id, username, password, user_type,email);
     }
 }

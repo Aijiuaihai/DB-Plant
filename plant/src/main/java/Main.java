@@ -24,6 +24,7 @@ public class Main {
             System.out.println("登录系统");
             System.out.println("请输入用户名:");
             String username = scanner.nextLine();
+            System.out.println("（忘记密码时可使用注册邮箱联系管理员邮箱msydazen@bjdu.edu.cn找回）");
             System.out.println("请输入密码:");
             String password = scanner.nextLine();
 

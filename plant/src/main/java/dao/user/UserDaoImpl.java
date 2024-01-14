@@ -15,12 +15,12 @@ public class UserDaoImpl implements UserDao {
     public boolean addUser(User user) {
         try {
             Connection connection = MySQLConnectionPool.getConnection();
-            String sql = "INSERT INTO `user` (username, password, user_type) VALUES (?, ?, ?)";
+            String sql = "INSERT INTO `user` (username, password, user_type,email) VALUES (?, ?, ?,?)";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, user.getUsername());
             ps.setString(2, user.getPassword());
             ps.setString(3, user.getUser_type());
-
+            ps.setString(4, user.getemail());
             int rowsInserted = ps.executeUpdate();
             ps.close();
             return rowsInserted > 0; // 如果插入了一行或多行数据，则返回 true
@@ -120,7 +120,32 @@ public class UserDaoImpl implements UserDao {
         }
         return user;
     }
+    public User getUserByemail(String email) {
+        User user = null;
+        try {
+            Connection connection = MySQLConnectionPool.getConnection();
+            String sql = "SELECT * FROM `user` WHERE email = ?";
+            PreparedStatement ps = connection.prepareStatement(sql);
+            ps.setString(1, email);
 
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                user = new User();
+                user.setUser_id(rs.getInt("user_id"));
+                user.setUsername(rs.getString("username"));
+                user.setPassword(rs.getString("password"));
+                user.setUser_type(rs.getString("user_type"));
+                user.seteamil(rs.getString("email"));
+            }
+
+            rs.close();
+            ps.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return user;
+    }
     @Override
     public List<User> getAllUsers() {
         List<User> userList = new ArrayList<>();
@@ -136,6 +161,7 @@ public class UserDaoImpl implements UserDao {
                 user.setUsername(rs.getString("username"));
                 user.setPassword(rs.getString("password"));
                 user.setUser_type(rs.getString("user_type"));
+                user.seteamil(rs.getString("email"));
                 userList.add(user);
             }
 
@@ -158,6 +184,7 @@ public class UserDaoImpl implements UserDao {
                 user.setUser_id(rs.getInt("user_id"));
                 user.setUsername(rs.getString("username"));
                 user.setUser_type(rs.getString("user_type"));
+                user.seteamil(rs.getString("email"));
                 userList.add(user);
             }
 

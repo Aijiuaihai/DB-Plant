@@ -28,7 +28,7 @@ public class UserService {
         return user != null;
     }
 
-    public void addUser(String username, String password, String level) {
+    public void addUser(String username, String password, String level,String email) {
         if (isUserExisted(username)) {
             System.out.println("已有重名用户,回车继续");
             scanner.nextLine();
@@ -37,7 +37,7 @@ public class UserService {
             user.setUsername(username);
             user.setPassword(password);
             user.setUser_type(level);
-
+            user.seteamil(email);
             userDao.addUser(user);
             System.out.println("添加成功(回车继续)");
             scanner.nextLine();
@@ -49,6 +49,7 @@ public class UserService {
                 2.添加用户信息
                 3.修改用户信息
                 4.删除用户信息
+                5.找回用户密码
                 """;
         Scanner scanner = new Scanner(System.in);
         System.out.println(message);
@@ -64,6 +65,9 @@ public class UserService {
                 break;
             case "4":
                 deleteUser();
+                break;
+            case "5":
+                findUser();
                 break;
             default:
                 System.out.println("输入有误。");
@@ -107,6 +111,8 @@ public class UserService {
                 2.监测人员
                 3.上级主管部门""");
         String s = scanner.nextLine();
+        System.out.println("输入用户邮箱");
+        String emali = scanner.nextLine();
         String level = null;
         switch (s) {
             case "1":
@@ -124,7 +130,7 @@ public class UserService {
 
         }
 
-        addUser(username, password, level);
+        addUser(username, password, level,emali);
 
     }
     private void modifyUser(){
@@ -198,7 +204,22 @@ public class UserService {
         }else {
             System.out.println("删除失败");
         }
-
-
+    }
+    private void findUser(){
+        System.out.println("请输入您想找回密码的邮箱");
+        String email;
+        try {
+            email =  scanner.nextLine();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("您的输入有误。");
+            return;
+        }
+        User user = userDao.getUserByemail(email);
+        if(user!=null){
+            System.out.println(user);
+        }else {
+            System.out.println("没有用户绑定该邮箱");
+        }
     }
 }
