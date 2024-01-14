@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50173
 File Encoding         : 65001
 
-Date: 2023-12-22 21:45:59
+Date: 2024-01-14 11:16:37
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -230,13 +230,15 @@ CREATE TABLE `user` (
   `username` char(255) DEFAULT NULL,
   `password` char(255) DEFAULT NULL,
   `user_type` char(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('1', 'admin', 'admin', 'admin');
-INSERT INTO `user` VALUES ('2', 'care1', '123456', 'careTaker');
-INSERT INTO `user` VALUES ('3', 'watch1', '123456', 'monitor');
-INSERT INTO `user` VALUES ('4', 'manger', '123456', 'department');
+INSERT INTO `user` VALUES ('1', 'admin', 'admin', 'admin', 'msydazen@bjfu.edu.cn');
+INSERT INTO `user` VALUES ('2', 'care1', '123456', 'careTaker', 'care1@163.com');
+INSERT INTO `user` VALUES ('3', 'watch1', '123456', 'monitor', 'watch1@163.com');
+INSERT INTO `user` VALUES ('4', 'manger', '123456', 'department', 'manger@163.com');
+INSERT INTO `user` VALUES ('5', 'manger2', '123456', 'department', 'manger2@163.com');
